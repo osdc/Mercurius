@@ -1,0 +1,2 @@
+# Mercurius
+Community Newsletter Initiative
