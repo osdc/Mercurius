@@ -1,0 +1,100 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+author = "Someone on earth"
+title = "Mercurius"
+theme = "vitae"
+paginate = 5
+enableRobotsTXT = true
+
+pygmentsstyle = "colorful"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+	# Use homepage.md instead of a list of posts
+	homepage = false
+
+	# Add meta description in head part
+	description = "Newsletter example site"
+
+	# Add pagetitle to homepage <title> tag
+	pagetitle = "All about static site generation"
+
+	# Add a subtitle to your website
+	subtitle = "Let's see how this goes . . ."
+
+	# Activate to show authors on pages if available
+	#listAuthor = true
+
+	# Add math typesetting with KaTeX (Global with this Param)
+	math = true
+
+	# Optional 80x80 avatar image.
+	# avatar = "/img/vitae.jpg"
+
+	# Optional favicons for website
+	#favicon = true
+
+	# Add list of sections that should show up on the homepage
+        mainSections = ["post"]
+
+	# Add list of Sections/Types that should no be considered by RSS
+	#nofeedSections = ["post"]
+
+	# Deactivate Taxonomies for specific page types
+	#disableTaxoTypes = [""]
+
+	# Custom CSS applied to default styles. (Path could be "static/css/")
+	#customCSS = "css/custom.css"
+
+# Comments
+[params.comments]
+# Enable Comments with "true"
+enabled = false
+
+# Comment provider:
+#   disqus (https://disqus.com)
+#   commento (https://commento.io)
+#engine = "disqus"
+
+# Content types to disable comments on.
+#disableOnTypes = ["page"]
+
+[params.comments.disqus]
+#shortname = "" # Paste the shortname from your Disqus dashboard.
+
+[params.comments.commento]
+#host = "" # Paste the domain of you commento.io system
+
+# Navigation
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All Posts"
+url = "/post"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+# Social Menu
+[[params.social]]
+name = "Github"
+icon = "fab fa-github"
+url = "https://github.com/daemon1024"
+
+#[[params.social]]
+#name = "Email"
+#icon = "fas fa-envelope"
+#cmd = "mailto:example@example.com"
+
+[[params.social]]
+name = "RSS"
+icon = "fas fa-rss"
+url = "/index.xml"
