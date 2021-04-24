@@ -1,11 +1,14 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"io/ioutil"
 	"log"
 	"net/smtp"
 	"os"
+
+	"github.com/yuin/goldmark"
 )
 
 type subscriberList struct {
@@ -28,7 +31,14 @@ func main() {
 
 	json.Unmarshal(byteValue, &list)
 
-	send("OwO", list.Subscribers)
+	content, _ := ioutil.ReadFile("../../content/post/example.md")
+
+	var buf bytes.Buffer
+
+	if err := goldmark.Convert(content, &buf); err != nil {
+		panic(err)
+	}
+	send(string(content), list.Subscribers)
 }
 
 func send(body string, to []string) {
