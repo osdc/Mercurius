@@ -5,11 +5,11 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"log"
-	"net/smtp"
 	"os"
 
 	"github.com/yuin/goldmark"
 	meta "github.com/yuin/goldmark-meta"
+	"gopkg.in/gomail.v2"
 )
 
 type subscriberList struct {
@@ -54,17 +54,22 @@ func send(body string, to []string) {
 	from := os.Getenv("MAIL_ID")
 	pass := os.Getenv("MAIL_PASSWORD")
 
-	msg := "Subject: Hello there o/ \n\n" +
-		body
-
-	err := smtp.SendMail("smtp.gmail.com:587",
-		smtp.PlainAuth("", from, pass, "smtp.gmail.com"),
-		from, to, []byte(msg))
-
+	d := gomail.NewDialer("smtp.gmail.com", 587, from, pass)
+	s, err := d.Dial()
 	if err != nil {
-		log.Printf("smtp error: %s", err)
-		return
+		panic(err)
 	}
 
-	log.Print("sent")
+	m := gomail.NewMessage()
+	for _, r := range to {
+		m.SetHeader("From", from)
+		m.SetAddressHeader("To", r, r)
+		m.SetHeader("Subject", "Newsletter Test")
+		m.SetBody("text/html", body)
+
+		if err := gomail.Send(s, m); err != nil {
+			log.Printf("Could not send email to %q: %v", r, err)
+		}
+		m.Reset()
+	}
 }
