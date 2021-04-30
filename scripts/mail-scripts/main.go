@@ -9,6 +9,7 @@ import (
 	"os"
 
 	"github.com/yuin/goldmark"
+	meta "github.com/yuin/goldmark-meta"
 )
 
 type subscriberList struct {
@@ -16,6 +17,11 @@ type subscriberList struct {
 }
 
 func main() {
+	markdown := goldmark.New(
+		goldmark.WithExtensions(
+			meta.Meta,
+		),
+	)
 
 	jsonFile, err := os.Open("emails.json")
 
@@ -35,10 +41,13 @@ func main() {
 
 	var buf bytes.Buffer
 
-	if err := goldmark.Convert(content, &buf); err != nil {
+	if err := markdown.Convert(content, &buf); err != nil {
 		panic(err)
 	}
-	send(string(content), list.Subscribers)
+
+	log.Print(string(buf.String()))
+
+	send(string(buf.String()), list.Subscribers)
 }
 
 func send(body string, to []string) {
