@@ -1,4 +1,4 @@
-module github.com/daemon1024/Mercurius
+module github.com/osdc/Mercurius
 
 go 1.15
 
