@@ -64,14 +64,7 @@ func main() {
 	for _, email := range subsList.Subscribers {
 
 		// Get the unsubscribe hash string
-		unSubscribeHash := addUnsubscribeLink(contentString, email)
-
-		// Prepare the HTML template of the unsubscribe option (raw as of now)
-		unSubscribeTemplate := fmt.Sprintf("<a href=\"/unsubscribe?uniqhash=%s\">UnSubscribe</a>", unSubscribeHash)
-
-		// Append the hash to the email body
-		completeContent := fmt.Sprintf("%s\n\n%s", contentString, unSubscribeTemplate)
-		log.Println(completeContent)
+		completeContent := addUnsubscribeLink(contentString, email)
 
 		// TODO here: Add image to the top of content if needed
 
@@ -88,13 +81,20 @@ func main() {
 func addUnsubscribeLink(contentString string, email string) string {
 
 	// Get the encrypted hash to be sent
-	unsubString := encryptUnsubscribeString(contentString, email)
-	return unsubString
+	unsubString := encryptUnsubscribeString(email)
+
+	// Prepare the HTML template of the unsubscribe option (raw as of now)
+	unSubscribeTemplate := fmt.Sprintf("<a href=\"/unsubscribe?uniqhash=%s\">UnSubscribe</a>", unsubString)
+
+	// Append the hash to the email body
+	newContent := fmt.Sprintf("%s\n\n%s", contentString, unSubscribeTemplate)
+
+	return newContent
 }
 
 // Helper function to above to encrypt user email in order to find
 // unsubscribe link hash
-func encryptUnsubscribeString(plainSecret string, email string) string {
+func encryptUnsubscribeString(email string) string {
 
 	encKey := os.Getenv("EMAIL_ENC_KEY")
 	//Since the key is in string, we need to convert decode it to bytes
