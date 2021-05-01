@@ -22,7 +22,7 @@ pygmentscodefencesguesssyntax = true
 	pagetitle = "All about static site generation"
 
 	# Add a subtitle to your website
-	subtitle = "Let's see how this goes . . ."
+	subtitle = "OSDC Newsletter . . ."
 
 	# Activate to show authors on pages if available
 	#listAuthor = true
