@@ -18,45 +18,64 @@ import (
 	"gopkg.in/gomail.v2"
 )
 
+// Struct to store subscribers list array
 type subscriberList struct {
 	Subscribers []string `json:"subscribers"`
 }
 
 func main() {
+
+	// Init goldmark configuration
 	markdown := goldmark.New(
 		goldmark.WithExtensions(
 			meta.Meta,
 		),
 	)
 
-	jsonFile, err := os.Open("emails.json")
-
+	// Open emails file for reading emails (Will be replaced in future)
+	emailFile, err := os.Open("emails.json")
 	if err != nil {
 		log.Print(err)
 	}
+	defer emailFile.Close()
 
-	defer jsonFile.Close()
+	// Read emails from the file into a buffer
+	byteValue, _ := ioutil.ReadAll(emailFile)
 
-	byteValue, _ := ioutil.ReadAll(jsonFile)
+	// Transferring email data to a var
+	var subsList subscriberList
+	json.Unmarshal(byteValue, &subsList)
 
-	var list subscriberList
-
-	json.Unmarshal(byteValue, &list)
-
+	// Reading content to be sent
+	// TODO: Replace this with logic to read file containing the latest post
 	content, _ := ioutil.ReadFile("../../content/post/example.md")
 
-	var buf bytes.Buffer
-
-	if err := markdown.Convert(content, &buf); err != nil {
-		panic(err)
+	// Convert the markdown into a compatible HTML format
+	var htmlContent bytes.Buffer
+	if err := markdown.Convert(content, &htmlContent); err != nil {
+		log.Fatalln(err)
 	}
 
-	log.Print(string(buf.String()))
+	// Iterate over emails list and start sending
+	for _, email := range subsList.Subscribers {
 
-	send(string(buf.String()), list.Subscribers)
+		unSubscribeHash := addUnsubscribeLink(htmlContent.String(), email)
+
+		// Prepare the HTML template of the unsubscribe option (raw as of now)
+		unSubscribeTemplate := fmt.Sprintf("<a href=%s>UnSubscribe</a>", unSubscribeHash)
+
+		// Append the hash to the email body
+		completeContent := fmt.Sprintf("%s\n\n%s", content, unSubscribeTemplate)
+
+		// TODO here: Add image to the top of content if needed
+
+		// Send the email to the recipient
+		send(completeContent, email)
+	}
+
 }
 
-// Assuming the HTML rendered string is sent as contentString with the email
+// Utility to get the unsubscribe hash
 func addUnsubscribeLink(contentString string, email string) string {
 
 	// Get the encrypted hash to be sent
@@ -64,6 +83,8 @@ func addUnsubscribeLink(contentString string, email string) string {
 	return unsubString
 }
 
+// Helper function to above to encrypt user email in order to find
+// unsubscribe link hash
 func encryptUnsubscribeString(plainSecret string, email string) string {
 
 	encKey := os.Getenv("EMAIL_ENC_KEY")
@@ -96,26 +117,25 @@ func encryptUnsubscribeString(plainSecret string, email string) string {
 	return fmt.Sprintf("%x", ciphertext)
 }
 
-func send(body string, to []string) {
+// Utility to send emails using gomail
+func send(body string, to string) {
 	from := os.Getenv("MAIL_ID")
 	pass := os.Getenv("MAIL_PASSWORD")
 
-	d := gomail.NewDialer("smtp.gmail.com", 587, from, pass)
-	s, err := d.Dial()
+	dialer := gomail.NewDialer("smtp.gmail.com", 587, from, pass)
+	s, err := dialer.Dial()
 	if err != nil {
 		panic(err)
 	}
 
 	m := gomail.NewMessage()
-	for _, r := range to {
-		m.SetHeader("From", from)
-		m.SetAddressHeader("To", r, r)
-		m.SetHeader("Subject", "Newsletter Test")
-		m.SetBody("text/html", body)
+	m.SetHeader("From", from)
+	m.SetAddressHeader("To", to, to)
+	m.SetHeader("Subject", "Newsletter Test")
+	m.SetBody("text/html", body)
 
-		if err := gomail.Send(s, m); err != nil {
-			log.Printf("Could not send email to %q: %v", r, err)
-		}
-		m.Reset()
+	if err := gomail.Send(s, m); err != nil {
+		log.Printf("Could not send email to %q: %v", body, err)
 	}
+	m.Reset()
 }
