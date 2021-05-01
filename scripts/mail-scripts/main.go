@@ -57,17 +57,21 @@ func main() {
 	if err := markdown.Convert(content, &htmlContent); err != nil {
 		log.Fatalln(err)
 	}
+	// Convert to string for using and tweaking it everywhere
+	contentString := htmlContent.String()
 
 	// Iterate over emails list and start sending
 	for _, email := range subsList.Subscribers {
 
-		unSubscribeHash := addUnsubscribeLink(htmlContent.String(), email)
+		// Get the unsubscribe hash string
+		unSubscribeHash := addUnsubscribeLink(contentString, email)
 
 		// Prepare the HTML template of the unsubscribe option (raw as of now)
-		unSubscribeTemplate := fmt.Sprintf("<a href=%s>UnSubscribe</a>", unSubscribeHash)
+		unSubscribeTemplate := fmt.Sprintf("<a href=\"/unsubscribe?uniqhash=%s\">UnSubscribe</a>", unSubscribeHash)
 
 		// Append the hash to the email body
-		completeContent := fmt.Sprintf("%s\n\n%s", content, unSubscribeTemplate)
+		completeContent := fmt.Sprintf("%s\n\n%s", contentString, unSubscribeTemplate)
+		log.Println(completeContent)
 
 		// TODO here: Add image to the top of content if needed
 
