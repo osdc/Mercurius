@@ -70,8 +70,13 @@ func main() {
 		// TODO here: Add image to the top of content if needed
 
 		// Send the email to the recipient
-		send(completeContent, email)
+		err := send(completeContent, email)
+		if err != nil {
+			log.Println("Error while sending mail to subscriber", email, "\nError : ", err)
+		}
 	}
+
+	log.Println("====ALL EMAILS SENT SUCCESSFULLY!!====")
 
 }
 
@@ -118,14 +123,15 @@ func encryptUnsubscribeString(plainSecret string, email string) string {
 }
 
 // Utility to send emails using gomail
-func send(body string, to string) {
+func send(body string, to string) error {
 	from := os.Getenv("MAIL_ID")
 	pass := os.Getenv("MAIL_PASSWORD")
 
 	dialer := gomail.NewDialer("smtp.gmail.com", 587, from, pass)
 	s, err := dialer.Dial()
 	if err != nil {
-		panic(err)
+		log.Println(err)
+		return err
 	}
 
 	m := gomail.NewMessage()
@@ -136,6 +142,8 @@ func send(body string, to string) {
 
 	if err := gomail.Send(s, m); err != nil {
 		log.Printf("Could not send email to %q: %v", body, err)
+		return err
 	}
 	m.Reset()
+	return nil
 }
