@@ -25,6 +25,8 @@ type subscriberList struct {
 
 func main() {
 
+	log.SetFlags(log.LstdFlags | log.Lshortfile)
+
 	// Init goldmark configuration
 	markdown := goldmark.New(
 		goldmark.WithExtensions(
@@ -75,8 +77,6 @@ func main() {
 			log.Println("Error while sending mail to subscriber", email, "\nError : ", err)
 		}
 	}
-
-	log.Println("====ALL EMAILS SENT SUCCESSFULLY!!====")
 
 }
 
