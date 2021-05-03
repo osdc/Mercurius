@@ -23,9 +23,14 @@ type subscriberList struct {
 	Subscribers []string `json:"subscribers"`
 }
 
+// Domain of cloudfare serverless endpoint
+var domain string
+
 func main() {
 
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
+
+	domain = os.Getenv("DOMAIN_NAME")
 
 	// Init goldmark configuration
 	markdown := goldmark.New(
@@ -84,7 +89,7 @@ func addUnsubscribeLink(contentString string, email string) string {
 	unsubString := encryptUnsubscribeString(email)
 
 	// Prepare the HTML template of the unsubscribe option (raw as of now)
-	unSubscribeTemplate := fmt.Sprintf("<a href=\"/unsubscribe?uniqhash=%s\">UnSubscribe</a>", unsubString)
+	unSubscribeTemplate := fmt.Sprintf("<a href=\"%s/unsubscribe?uniqhash=%s\">UnSubscribe</a>", domain, unsubString)
 
 	// Append the hash to the email body
 	newContent := fmt.Sprintf("%s\n\n%s", contentString, unSubscribeTemplate)
