@@ -2,10 +2,22 @@
   <div class="footer-content">
     <p>Like what you read? Subscribe to the Newsletter!</p>
     <div class="input">
-      <form>
       <input type="email" placeholder="Email ID" id="email" />
-      <button onClick="alert(``);" id="button">Subscribe</button>
-      </form>
+      <button onClick="subscribe()" id="button">Subscribe</button>
     </div>
   </div>
+  <script>
+    async function subscribe() {
+      let email = document.getElementById("email").value;
+
+      let response = await fetch("http://localhost:8787/subscribe", {
+        method: "POST",
+        body: email,
+        mode: "no-cors",
+      });
+
+      let result = await response.json();
+      alert(result.message);
+    }
+  </script>
 </footer>
