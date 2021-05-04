@@ -9,15 +9,14 @@
   <script>
     async function subscribe() {
       let email = document.getElementById("email").value;
-
-      let response = await fetch("http://localhost:8787/subscribe", {
+      let API_ENDPOINT = `{{ getenv "API" }}`;
+      let response = await fetch(API_ENDPOINT + "/subscribe", {
         method: "POST",
         body: email,
-        mode: "no-cors",
       });
 
-      let result = await response.json();
-      alert(result.message);
+      let result = await response.text();
+      alert(result);
     }
   </script>
 </footer>
