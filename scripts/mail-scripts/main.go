@@ -5,7 +5,7 @@ import (
 	"crypto/aes"
 	"crypto/cipher"
 	"crypto/rand"
-	"encoding/hex"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -101,11 +101,13 @@ func addUnsubscribeLink(contentString string, email string) string {
 // unsubscribe link hash
 func encryptUnsubscribeString(email string) string {
 
+	// THE EMAIL_ENC_KEY is the base64 encoded string of a 32 byte character string (I hope its right!)
 	encKey := os.Getenv("EMAIL_ENC_KEY")
-	//Since the key is in string, we need to convert decode it to bytes
-	key, err := hex.DecodeString(encKey)
+
+	// Decode the key to bytes from base64
+	key, err := base64.StdEncoding.DecodeString(encKey)
 	if err != nil {
-		log.Println(err)
+		log.Fatalln("Error in decoding key :", err)
 	}
 
 	// convert the string to encrypt to bytes
@@ -128,7 +130,7 @@ func encryptUnsubscribeString(email string) string {
 	}
 
 	ciphertext := aesGCM.Seal(nonce, nonce, byteSecret, nil)
-	return fmt.Sprintf("%x", ciphertext)
+	return base64.StdEncoding.EncodeToString(ciphertext)
 }
 
 // Utility to send emails using gomail
