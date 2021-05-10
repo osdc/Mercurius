@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-author = "Someone on earth"
+author = "OSDC"
 title = "Mercurius"
 theme = "vitae"
 paginate = 5
@@ -16,13 +16,13 @@ pygmentscodefencesguesssyntax = true
 	homepage = false
 
 	# Add meta description in head part
-	description = "Newsletter example site"
+	description = "OSDC Newsletter"
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "All about static site generation"
+	pagetitle = "Home"
 
 	# Add a subtitle to your website
-	subtitle = "Let's see how this goes . . ."
+	subtitle = "An OSDC Newsletter"
 
 	# Activate to show authors on pages if available
 	#listAuthor = true
@@ -48,25 +48,6 @@ pygmentscodefencesguesssyntax = true
 	# Custom CSS applied to default styles. (Path could be "static/css/")
 	#customCSS = "css/custom.css"
 
-# Comments
-[params.comments]
-# Enable Comments with "true"
-enabled = false
-
-# Comment provider:
-#   disqus (https://disqus.com)
-#   commento (https://commento.io)
-#engine = "disqus"
-
-# Content types to disable comments on.
-#disableOnTypes = ["page"]
-
-[params.comments.disqus]
-#shortname = "" # Paste the shortname from your Disqus dashboard.
-
-[params.comments.commento]
-#host = "" # Paste the domain of you commento.io system
-
 # Navigation
 [[menu.main]]
 name = "Home"
@@ -74,25 +55,20 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All Posts"
-url = "/post"
-weight = 2
-
-[[menu.main]]
 name = "About"
 url = "/about"
-weight = 3
+weight = 2
 
 # Social Menu
 [[params.social]]
+name = "Twitter"
+icon = "fab fa-twitter"
+url = "https://twitter.com/osdcjiit"
+
+[[params.social]]
 name = "Github"
 icon = "fab fa-github"
-url = "https://github.com/daemon1024"
-
-#[[params.social]]
-#name = "Email"
-#icon = "fas fa-envelope"
-#cmd = "mailto:example@example.com"
+url = "https://github.com/osdc/Mercurius"
 
 [[params.social]]
 name = "RSS"
