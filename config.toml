@@ -3,7 +3,6 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "OSDC"
 title = "Mercurius"
-theme = "vitae"
 paginate = 10
 enableRobotsTXT = true
 
