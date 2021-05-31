@@ -5,6 +5,7 @@ author = "OSDC"
 title = "Mercurius"
 paginate = 10
 enableRobotsTXT = true
+theme = "drizzle"
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
