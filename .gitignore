@@ -1,3 +1,6 @@
 ### Hugo ###
 /public/
 /resources/_gen/
+
+### Node Modules ###
+/node_modules/
