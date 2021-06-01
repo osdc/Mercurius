@@ -1,0 +1,12 @@
+{{/* variables in config.toml */}}
+<div class="flex">
+  <div class="flex-1">
+    <h1 class="text-3xl"> <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1> 
+    {{ .Site.Params.subtitle }}
+  </div>
+  <ul class="flex items-end">
+    {{ range .Site.Menus.main }}
+    <li class="mx-6"> <a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</div>
