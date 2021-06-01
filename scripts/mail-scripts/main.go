@@ -3,6 +3,8 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"html"
+	"html/template"
 	"io/ioutil"
 	"log"
 	"os"
@@ -44,10 +46,25 @@ func main() {
 	if err := markdown.Convert(content, &buf); err != nil {
 		panic(err)
 	}
+	t := template.New("template.html")
 
-	log.Print(string(buf.String()))
+	t, _ = t.ParseFiles("template.html")
 
-	send(string(buf.String()), list.Subscribers)
+	var body bytes.Buffer
+	log.Print(buf.String())
+
+	if err := t.Execute(&body, struct {
+		Content string
+	}{
+		Content: string(buf.String()),
+	}); err != nil {
+		log.Println(err)
+	}
+	html := html.UnescapeString(body.String())
+
+	log.Print(html)
+
+	send(html, list.Subscribers)
 }
 
 func send(body string, to []string) {
