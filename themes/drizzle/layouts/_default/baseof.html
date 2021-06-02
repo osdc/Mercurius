@@ -5,7 +5,7 @@
     background-image:url('{{`/images/bg.jpg` | relURL }}');
     background-size: cover;
     background-attachment: fixed;">
-        <div class="container mx-auto">
+        <div class="container mx-auto max-w-6xl">
         {{- partial "header.html" . -}}
         <div class="bg-white shadow-lg">  {{/* custom class min-h-merc-vh in assets/css/tailwind.config.js */}}
         {{- block "main" . }}{{- end }}
