@@ -1,7 +1,11 @@
 module.exports = {
   theme: {
-    extend: {}
+    extend: {},
+    minHeight: {
+      0: "0",
+      "merc-vh": "85vh",
+    },
+    variants: {},
+    plugins: [],
   },
-  variants: {},
-  plugins: []
-}
+};

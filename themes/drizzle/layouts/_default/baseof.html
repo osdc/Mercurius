@@ -7,7 +7,9 @@
     background-attachment: fixed;">
         <div class="container mx-auto">
         {{- partial "header.html" . -}}
+        <div class="bg-white shadow-lg">  {{/* custom class min-h-merc-vh in assets/css/tailwind.config.js */}}
         {{- block "main" . }}{{- end }}
+        </div>
         </div>
         <script src='{{`/js/responsive.js` | relURL }}'></script>
     </body>

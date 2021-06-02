@@ -8,7 +8,7 @@
   </div>
   <!-- for bigger screens -->
   <nav class="flex items-end">
-    <ul class="hidden lg:flex">
+    <ul class="hidden xl:flex">
       {{ range .Site.Menus.main }}
       <li class="mx-6 hover:text-gray-900">
         <a href="{{ .URL }}">{{ .Name }}</a>
@@ -23,7 +23,7 @@
     </li>
     {{ end }}
   </ul></div>
-  <div class="lg:hidden flex items-end">
+  <div class="xl:hidden flex items-end">
     <button class="mobile-menu-button text-gray-700 focus:outline-none focus:text-gray-900">
       <svg
         xmlns="http://www.w3.org/2000/svg"
