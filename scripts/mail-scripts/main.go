@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"html"
 	"html/template"
 	"io/ioutil"
@@ -11,6 +12,7 @@ import (
 
 	"github.com/yuin/goldmark"
 	meta "github.com/yuin/goldmark-meta"
+	"github.com/yuin/goldmark/parser"
 	"gopkg.in/gomail.v2"
 )
 
@@ -42,27 +44,29 @@ func main() {
 	content, _ := ioutil.ReadFile("../../content/post/example.md")
 
 	var buf bytes.Buffer
-
-	if err := markdown.Convert(content, &buf); err != nil {
+	context := parser.NewContext()
+	if err := markdown.Convert(content, &buf, parser.WithContext(context)); err != nil {
 		panic(err)
 	}
-	t := template.New("template.html")
+	metaData := meta.Get(context)
+	title := metaData["title"]
+	str := fmt.Sprintf("%v", title)
 
+	t := template.New("template.html")
 	t, _ = t.ParseFiles("template.html")
 
 	var body bytes.Buffer
-	log.Print(buf.String())
 
 	if err := t.Execute(&body, struct {
 		Content string
+		Title   string
 	}{
-		Content: string(buf.String()),
+		Content: buf.String(),
+		Title:   str,
 	}); err != nil {
 		log.Println(err)
 	}
 	html := html.UnescapeString(body.String())
-
-	log.Print(html)
 
 	send(html, list.Subscribers)
 }
