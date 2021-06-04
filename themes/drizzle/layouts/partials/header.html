@@ -1,8 +1,8 @@
 {{/* variables in config.toml */}}
 <div class="flex p-3 text-gray-700">
   <div class="flex-1">
-    <h1 class="text-3xl font-bold hover:text-gray-900">
-      <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    <h1 class="text-3xl font-bold transform hover:scale-y-110 transition ease-out duration-75">
+      <a class="hover:text-gray-900" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </h1>
     {{ .Site.Params.subtitle }}
   </div>
@@ -10,11 +10,12 @@
   <nav class="flex items-end">
     <ul class="hidden xl:flex my-4 tracking-wider">
       {{ range .Site.Menus.main }}
-      <li class="mx-6 hover:text-gray-900">
+      <li class="mx-6 hover:text-gray-900 transform hover:scale-125 transition ease-out duration-75">
         <a href="{{ .URL }}">{{ .Name }}</a>
       </li>
       {{ end }}
     </ul>
+
   <!-- for mobile / tablet devices -->
   <div class="mobile-menu relative top-7 bg-white mr-2 px-2 shadow hidden"><ul>
     {{ range .Site.Menus.main }}
@@ -43,3 +44,4 @@
   </div>
 </nav>
 </div>
+<hr>

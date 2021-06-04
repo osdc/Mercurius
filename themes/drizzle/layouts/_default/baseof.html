@@ -6,9 +6,8 @@
     background-image:url('{{`/images/Dalmatian-Spots.svg` | relURL }}');
     background-attachment: fixed;"
   >
-    <div class="container mx-auto max-w-6xl">
+    <div class="container mx-auto max-w-4xl text-gray-700">
       {{- partial "header.html" . -}}
-      <div class="rounded shadow-xl bg-white bg-opacity-70">
         {{- block "main" . }}
         {{- end }}
       </div>

@@ -1,8 +1,46 @@
 {{ define "main" }}
-<div class="container p-6 text-justify text-gray-700 max-w-3xl">
-{{- range where .Site.RegularPages "Type" "post" -}}
-    <a class="text-xl font-bold" href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-    {{ .Summary }} <br> <br> <hr>
-  {{ end }}
+
+<div class="pt-4">
+  <h1 class="text-3xl ml-6 font-bold text-center">About us</h1>
+  <div class="p-6 text-justify text-2xl">
+      Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
+      fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
+      sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
+      debitis nam quod?
+  </div>
+</div>
+<div class="pt-4">
+    <h1 class="text-3xl ml-6 font-bold text-center">Latest issue</h1>
+    <div class="rounded shadow-xl p-6 text-justify bg-white text-2xl">
+        Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
+        fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
+        sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
+        debitis nam quod?
+        Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
+        fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
+        sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
+        debitis nam quod?
+        Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
+        fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
+        sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
+        debitis nam quod?
+        Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
+        fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
+        sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
+        debitis nam quod?
+
+    </div>
+  </div>
+  <h1 class="text-3xl ml-6 font-bold text-center">Archive</h1>
+<div class="rounded shadow-xl bg-white bg-opacity-70">
+  <div class="container my-4 p-6 text-justify text-gray-700 max-w-3xl">
+    {{- range where .Site.RegularPages "Type" "post" -}}
+    <a class="text-xl font-bold" href="{{ .RelPermalink }}">{{ .Title }}</a
+    ><br />
+    <!-- {{ .Summary }} <br /> -->
+    <br />
+    <hr />
+    {{ end }}
+  </div>
 </div>
 {{ end }}
