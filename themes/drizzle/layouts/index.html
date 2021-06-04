@@ -2,7 +2,7 @@
 <div class="container p-6 text-justify text-gray-700 max-w-3xl">
 {{- range where .Site.RegularPages "Type" "post" -}}
     <a class="text-xl font-bold" href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-    {{ .Summary }} <br> <br>
+    {{ .Summary }} <br> <br> <hr>
   {{ end }}
 </div>
 {{ end }}

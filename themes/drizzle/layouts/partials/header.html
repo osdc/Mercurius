@@ -1,5 +1,5 @@
 {{/* variables in config.toml */}}
-<div class="flex p-3 text-gray-600">
+<div class="flex p-3 text-gray-700">
   <div class="flex-1">
     <h1 class="text-3xl font-bold hover:text-gray-900">
       <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
@@ -8,7 +8,7 @@
   </div>
   <!-- for bigger screens -->
   <nav class="flex items-end">
-    <ul class="hidden xl:flex">
+    <ul class="hidden xl:flex my-4 tracking-wider">
       {{ range .Site.Menus.main }}
       <li class="mx-6 hover:text-gray-900">
         <a href="{{ .URL }}">{{ .Name }}</a>

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
-    <body style="
-    background-image:url('{{`/images/bg.jpg` | relURL }}');
-    background-size: cover;
-    background-attachment: fixed;">
-        <div class="container mx-auto max-w-6xl">
-        {{- partial "header.html" . -}}
-        <div class="bg-white shadow-lg">  {{/* custom class min-h-merc-vh in assets/css/tailwind.config.js */}}
-        {{- block "main" . }}{{- end }}
-        </div>
-        </div>
-        <script src='{{`/js/responsive.js` | relURL }}'></script>
-    </body>
+  {{- partial "head.html" . -}}
+  <body
+    style="
+    background-image:url('{{`/images/Dalmatian-Spots.svg` | relURL }}');
+    background-attachment: fixed;"
+  >
+    <div class="container mx-auto max-w-6xl">
+      {{- partial "header.html" . -}}
+      <div class="rounded shadow-xl bg-white bg-opacity-70">
+        {{- block "main" . }}
+        {{- end }}
+      </div>
+    </div>
+    <script src="{{`/js/responsive.js` | relURL }}"></script>
+  </body>
 </html>

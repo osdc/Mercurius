@@ -4,15 +4,42 @@ date: 2021-06-02T19:40:24+05:30
 draft: true
 ---
 
-Researchers from University of Copenhagen have investigated what happened to a specific kind of plasma — the first matter ever to be present — during the first microsecond of Big Bang. Their findings provide a piece of the puzzle to the evolution of the universe, as we know it today.
+# First Microsecond of the Big Bang (H1)
+## This is an H2 This is an h2 this is an h2
+### This is an H3 This is an h3 this is an h3
+---
 
-About 14 billion years ago, our universe changed from being a lot hotter and denser to expanding radically – a process that scientists have named ‘The Big Bang’.
+Researchers from *University of Copenhagen* have investigated 
+> This is supposed to be a blockquote - 
+> what happened to a specific kind of plasma — the first matter ever to be present
+**during the first microsecond of Big Bang**. Their findings provide a piece of the puzzle to the evolution of the universe, as we know it today.
+---
+- UL item 1
+- UL item 2
+- UL item 3
+---
+CODE (needs formatting?)
+`fmt.println("Hello world)`
 
-And even though we know that this fast expansion created particles, atoms, stars, galaxies and life as we know it today, the details of how it all happened are still unknown.
+[This is supposed to be a link](https://www.example.com)
 
-Now a new study performed by researchers from University of Copenhagen reveals insights on how it all began.
+---
+Table (not working)
 
-“We have studied a substance called Quark-Gluon Plasma that was the only matter, which existed during the first microsecond of Big Bang. Our results tell us a unique story of how the plasma evolved in the early stage of the universe,” explains You Zhou, Associate Professor at the Niels Bohr Institute, University of Copenhagen.
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text | 
+
+---
+ORDERED LIST (not working)
+1. Ordered list point 1. About 14 billion years ago, our universe changed from being a lot hotter and denser to expanding radically – a process that scientists have named ‘The Big Bang’.
+
+2. Ordered list point 2. And even though we know that this fast expansion created particles, atoms, stars, galaxies and life as we know it today, the details of how it all happened are still unknown.
+
+3. Ordered list point 3. Now a new study performed by researchers from University of Copenhagen reveals insights on how it all began.
+---
+> “We have studied a substance called Quark-Gluon Plasma that was the only matter, which existed during the first microsecond of Big Bang. Our results tell us a unique story of how the plasma evolved in the early stage of the universe,” explains You Zhou, Associate Professor at the Niels Bohr Institute, University of Copenhagen.
 
 “First the plasma that consisted of quarks and gluons was separated by the hot expansion of the universe. Then the pieces of quark reformed into so-called hadrons. A hadron with three quarks makes a proton, which is part of atomic cores. These cores are the building blocks that constitutes earth, ourselves and the universe that surrounds us,” he adds.  
 From fluent and smooth to the strong building blocks of life
