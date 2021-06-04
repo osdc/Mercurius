@@ -1,42 +1,39 @@
 {{ define "main" }}
 
 <div class="pt-4">
-  <h1 class="text-3xl ml-6 font-bold text-center">About us</h1>
-  <div class="p-6 text-justify text-2xl">
-      Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
-      fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
-      sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
-      debitis nam quod?
+  <!-- <h1 class="text-2xl ml-6 font-bold text-center">About us</h1> -->
+  <div class="text-center font-black text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-green-500">
+      An OSDC Newsletter here, //probably in a cool font? And then hopefully a second line.
   </div>
 </div>
 <div class="pt-4">
-    <h1 class="text-3xl ml-6 font-bold text-center">Latest issue</h1>
+    <h1 class="text-2xl ml-6 font-bold text-center">
+        Latest issue
+    </h1>
     <div class="rounded shadow-xl p-6 text-justify bg-white text-2xl">
-        Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
-        fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
-        sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
-        debitis nam quod?
-        Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
-        fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
-        sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
-        debitis nam quod?
-        Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
-        fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
-        sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
-        debitis nam quod?
-        Lorem ipsum dolor sit, <b>amet consectetur adipisicing</b> elit. Aperiam
-        fugiat eius delectus <i>yolo yolo yolo yolo yolo </i>odit, natus sed, explicabo voluptatibus quaerat
-        sapiente soluta accusantium quod eos excepturi minima? Aperiam dicta
-        debitis nam quod?
-
+        {{- range ( where .Site.RegularPages "Type" "post" | first 1) -}}
+         <div class="text-xs">
+             {{ .Date.Format "Mon, Jan 02, 2006" }}
+        </div>
+        <div class="font-bold">
+            {{ .Title }}
+        </div>
+        <div class="text-base py-2">
+            {{ .Summary }} . . .
+        </div>
+        <div class="flex justify-center">
+            <button class="text-xl outline-none hover:bg-gray-600 hover:text-white font-bold py-1 px-2 rounded border-2 border-gray-600 bg-opacity-0 text-gray-700 transition ease-in duration-150">
+               <a href="{{ .RelPermalink }}">Read More</a>
+            </button>
+        </div>
+        {{ end }}
     </div>
   </div>
   <h1 class="text-3xl ml-6 font-bold text-center">Archive</h1>
 <div class="rounded shadow-xl bg-white bg-opacity-70">
   <div class="container my-4 p-6 text-justify text-gray-700 max-w-3xl">
     {{- range where .Site.RegularPages "Type" "post" -}}
-    <a class="text-xl font-bold" href="{{ .RelPermalink }}">{{ .Title }}</a
-    ><br />
+    <a class="text-xl font-bold">{{ .Title }}</a><br />
     <!-- {{ .Summary }} <br /> -->
     <br />
     <hr />

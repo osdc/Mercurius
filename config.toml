@@ -6,6 +6,7 @@ title = "Mercurius"
 paginate = 10
 enableRobotsTXT = true
 theme = "drizzle"
+summarylength = 100
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
