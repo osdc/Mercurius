@@ -1,7 +1,208 @@
-<!DOCTYPE html>
-<html>
-  <body style="background-color: powderblue">
-    <h2>{{.Title}}</h2>
-    <p>{{.Content}}</p>
-  </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
+
+    <style type="text/css">
+
+* { margin: 0; padding: 0; font-size: 100%; font-family: 'Avenir Next', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; line-height: 1.65; }
+
+img { max-width: 100%; margin: 0 auto; display: block; }
+
+body, .body-wrap { width: 100% !important; height: 100%; background: #f8f8f8; }
+
+a { color: #01b38c; text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+.text-center { text-align: center; }
+
+.text-right { text-align: right; }
+
+.text-left { text-align: left; }
+
+.button { display: inline-block; color: white; background: #01b38c; border: solid #01b38c; border-width: 10px 20px 8px; font-weight: bold; border-radius: 4px; }
+
+.button:hover { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 { margin-bottom: 20px; line-height: 1.25; }
+
+h1 { font-size: 32px; }
+
+h2 { font-size: 28px; }
+
+h3 { font-size: 24px; }
+
+h4 { font-size: 20px; }
+
+h5 { font-size: 16px; }
+
+p, ul, ol { font-size: 16px; font-weight: normal; margin-bottom: 20px; }
+
+.container { display: block !important; clear: both !important; margin: 0 auto !important; max-width: 580px !important; }
+
+.container table { width: 100% !important; border-collapse: collapse; }
+
+.container .masthead { padding: 80px 40px ; background:#01b38c; color: white; }
+
+.container .masthead h1 {  max-width: 90%; text-transform: uppercase; margin-bottom: 0; }
+
+.container .content { background: white; padding: 30px 35px; }
+
+.container .content.footer { background: none; }
+
+.container .content.footer p { margin-bottom: 0; color: #888; text-align: center; font-size: 14px; }
+
+.container .content.footer a { color: #888; text-decoration: none; font-weight: bold; }
+
+.container .content.footer a:hover { text-decoration: underline; }
+.footer-header h2 {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: "Futura", Helvetica, Arial, sans-serif;
+      }
+      .footer-address p {
+          color: black;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-align: center;
+      }
+      .footer-social-icons {
+        text-align: center;
+        margin: 20px 0 10px;
+      }
+      .footer-sub-links {
+        text-align: center;
+      }
+      .footer-sub-links a {
+        display: block;
+      }
+      @media only screen and (min-width: 480px) {
+        .container {
+          max-width: 600px;
+        }
+      }
+      @media only screen and (min-width: 480px) {
+        body {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+        .container {
+          max-width: 600px;
+        }
+        .content-body {
+          padding-top: 60px;
+        }
+        .content-body-text {
+          max-width: 400px;
+          margin: 0 auto;
+        }
+      }
+      @media only screen and (min-width: 480px) {
+        .button {
+          margin-top: 60px;
+          margin-bottom: 40px;
+        }
+      }
+      @media only screen and (min-width: 480px) {
+        .footer-header h2 {
+          text-align: left;
+        }
+      }
+      @media only screen and (min-width: 480px) {
+        .footer {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+      @media only screen and (min-width: 480px) {
+        .footer-address,
+        .footer-social-icons,
+        .footer-sub-links {
+          float: left;
+          width: 33.33%;
+        }
+      }
+      @media only screen and (min-width: 480px) {
+        .footer-address p {
+          text-align: left;
+        }
+        .footer-sub-links {
+          text-align: right;
+        }
+      }
+      .white{
+        color: white;
+      }
+.black{
+  color: black;
+}
+
+    </style>
+</head>
+<body>
+<table class="body-wrap">
+    <tr>
+        <td class="container">
+
+            <!-- Message start -->
+            
+            <table >
+                <div class="wrap"><tr >
+                    <td class="masthead">
+
+                        <h1>Mercurius</h1>
+                        <h4>An OSDC Newsletter</h4>
+                        <font face="'Roboto', Arial, sans-serif"><a href="#" style="color: #ffffff; text-decoration:none;
+                       ">Read Online</a> | <a href="#" style="color:#ffffff; text-decoration:none;">Previous Issues</a></font>
+                    </td>
+                </tr>
+                <tr></div>
+                    <td class="content">
+<div class="black">
+                        <h2>{{.Title}}</h2>
+
+                        <p>{{.Content}}</p></div>
+                        <table>
+                            <tr>
+                                <td align="center">
+                                    <p>
+                                      <div class="white"><a href="#" class="button">Read More</a></div>
+                                        
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="footer">
+                            <table width="600" border="0" cellspacing="0" cellpadding="20" bgcolor="#ffffff" class="100p">
+                                  <tr>
+                                      <td align="center" style="font-size:16px; color:#848484;"><font face="'Roboto', Arial, sans-serif"><span style="color:#2a8e9d; font-size:24px;">Thanks for reading</span><br />
+                                          <br />
+                                          <span style="font-size:16px;">We will continue to provide you important updates in the tech world.</span><br><span>If you do not wish to recieve similar emails, </span></font>
+                                       <a href="#"> click here. </a></td>
+                                      </tr>
+                              </table>
+                           <!-- <div class="footer-social-icons">
+                              <a href="#"><img src="images/icon-FB.jpg" alt="Github" /></a>
+                              <a href="#"
+                                ><img src="images/icon-IG.jpg" alt="Telegram"
+                              /></a>
+                            </div>-->
+                            
+                          </div>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table>
+</body>
 </html>
