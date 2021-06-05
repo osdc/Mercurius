@@ -9,7 +9,7 @@
     <h1 class="text-2xl ml-6 font-bold text-center">
         Latest Issue
     </h1>
-    <div class="rounded shadow-xl p-6 text-justify bg-white text-2xl hover:bg-opacity-40 transition ease-out duration-200">
+    <div class="rounded shadow-xl bg-opacity-50 p-6 text-justify bg-white text-2xl hover:bg-opacity-100 transition ease-out duration-200">
         {{- range ( where .Site.RegularPages "Type" "post" | first 1) -}}
          <div class="text-xs">
              {{ .Date.Format "Mon, January 02, 2006" }}
@@ -32,14 +32,16 @@
   <h1 class="text-2xl ml-6 font-bold text-center">
         All Posts
     </h1>
-<div class="rounded shadow-xl bg-white hover:bg-opacity-40 transition ease-out duration-200">
-  <div class="flex flex-col container p-6 text-justify">
+<div class="rounded shadow-xl bg-opacity-50 p-6 text-justify bg-white text-2xl hover:bg-opacity-100 transition ease-out duration-200">
+  <div class="flex flex-col container p-6">
     {{- range where .Site.RegularPages "Type" "post" -}}
-    <span class="text-xs">{{.Date.Format "Jan 02"}}</span>
+    <div class="flex justify-between">
     <a href="{{ .RelPermalink }}" class="text-xl font-bold hover:text-gray-500">
         {{ .Title }}
-    </a> <hr>
-    <br />
+    </a> 
+    <span class="text-xs">{{ .Date.Format "January 02" }}</span>
+    </div>
+    <hr>
     {{ end }}
   </div>
 </div>
