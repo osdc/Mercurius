@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "workers",
+  "version": "1.0.0",
+  "description": "A template for kick starting a Cloudflare Workers project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "daemon1024 <barun1024@gmail.com>",
+  "license": "MIT"
+}
