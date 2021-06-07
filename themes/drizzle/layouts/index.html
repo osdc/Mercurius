@@ -6,13 +6,13 @@
 </div>
 <div class="flex items-center flex-col my-4 mb-12">
     <div class="text-2xl italic">
-        Let us deliver right to your inbox!
+        Let us deliver straight to your inbox!
     </div>
     <form action="" class="flex">
-    <input type="email" class="outline-none p-2 sm:w-96 bg-white bg-opacity-50 rounded shadow hover:bg-opacity-100 focus:bg-opacity-100" id="email" placeholder="Email ID">
-    <button class="text-xl outline-none bg-gray-600 text-white font-bold py-1 px-2 rounded border-2">Subscribe</button>
+    <input type="email" class="outline-none p-2 sm:w-96 bg-white bg-opacity-50 rounded shadow hover:bg-opacity-100 focus:bg-opacity-100 transition ease-out duration-200" id="email" placeholder="Email">
+    <button class="text-xl outline-none bg-gray-600 text-white font-bold py-1 px-2 rounded border-2 hover:bg-gray-800 transition ease-out duration-200">Subscribe</button>
     </form>
-    <div class="text-gray-500 text-sm">Receive an update whenever the community posts an article. No spam, promise.</div>
+    <div class="text-gray-500 text-sm">Receive weekly newsletter updates. No spam, promise.</div>
 </div>
 <div class="py-4">
     <h1 class="text-2xl mx-6 font-bold text-center">
@@ -42,12 +42,12 @@
         All Posts
     </h1>
 <div class="rounded shadow-xl bg-opacity-50 p-6 text-justify bg-white text-2xl hover:bg-opacity-100 transition ease-out duration-200">
-<div class="flex flex-col container p-6">
+<div class="flex flex-col">
     {{- range where .Site.RegularPages "Type" "post" -}}
     <div class="flex justify-between">
     <a href="{{ .RelPermalink }}" class="text-xl font-bold hover:text-gray-500">
         {{ .Title }}
-    </a> 
+    </a>
     <span class="text-xs">{{ .Date.Format "January 02" }}</span>
     </div>
     <hr>
