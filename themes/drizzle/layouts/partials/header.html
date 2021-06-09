@@ -2,7 +2,7 @@
 <div class="flex p-3 text-gray-700">
   <div class="flex-1">
     <h1 class="text-3xl font-bold transform hover:scale-y-110 transition ease-out duration-75">
-      <a class="hover:text-gray-900" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+      <a class="hover:text-gray-900" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
     </h1>
     {{ .Site.Params.subtitle }}
   </div>
@@ -17,18 +17,18 @@
     </ul>
 
   <!-- for mobile / tablet devices -->
-  <div class="mobile-menu relative top-7 bg-white mr-2 px-2 shadow hidden"><ul>
+  <div class="mobile-menu relative top-7 bg-white mr-2 px-2 py-1 shadow hidden"><ul>
     {{ range .Site.Menus.main }}
-    <li class="hover:text-gray-900 text-sm py-1">
+    <li class="hover:text-gray-900">
       <a href="{{ .URL }}">{{ .Name }}</a>
     </li>
     {{ end }}
   </ul></div>
-  <div class="xl:hidden flex items-end">
+  <div class="xl:hidden flex items-end pb-4">
     <button class="mobile-menu-button text-gray-700 focus:outline-none focus:text-gray-900">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
+        class="h-7 w-7"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

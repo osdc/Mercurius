@@ -21,7 +21,6 @@ Researchers from *University of Copenhagen* have investigated
 ---
 CODE (needs formatting?)
 `fmt.println("Hello world)`
-llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
 [This is supposed to be a link](https://www.example.com)
 
 ---
