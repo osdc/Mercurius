@@ -1,11 +1,11 @@
-baseURL = "http://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "OSDC"
 title = "Mercurius"
-theme = "vitae"
-paginate = 5
+paginate = 10
 enableRobotsTXT = true
+theme = "drizzle"
+summarylength = 100
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true

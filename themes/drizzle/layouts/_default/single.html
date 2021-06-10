@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="px-6 py-6 mt-4 mx-2 rounded shadow-xl bg-white bg-opacity-70">
+<h1 class="text-2xl font-bold">
+    {{ .Title }}
+</h1>
+<small class="text-gray-500">
+    {{ .Date.Format "Monday, January 2, 2006" }}
+</small>
+<div class="pt-4 prose max-w-6xl text-justify">
+  {{ .Content }}
+  </div>
+  </div>
+{{ end }}

@@ -1,0 +1,30 @@
+{
+  "name": "mercurius",
+  "version": "1.0.0",
+  "description": "Community Newsletter Initiative",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osBins/Mercurius.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osBins/Mercurius/issues"
+  },
+  "homepage": "https://github.com/osBins/Mercurius#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.1.2"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.1"
+  }
+}

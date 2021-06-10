@@ -1,0 +1,48 @@
+{{/* variables in config.toml */}}
+<div class="flex p-3 text-gray-700">
+  <div class="flex-1">
+    <h1 class="text-3xl font-bold">
+      <a class="hover:text-gray-900" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+    </h1>
+    {{ .Site.Params.subtitle }}
+  </div>
+  <!-- for bigger screens -->
+  <nav class="flex items-end">
+    <ul class="hidden xl:flex my-4 tracking-wider">
+      {{ range .Site.Menus.main }}
+      <li class="mx-6 hover:text-gray-900 transform hover:scale-125 transition ease-out duration-75">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+
+  <!-- for mobile / tablet devices -->
+  <div class="mobile-menu relative bg-white mr-2 px-2 text-xl font-bold shadow hidden"><ul>
+    {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+  <div class="xl:hidden flex items-end pb-4">
+    <button class="mobile-menu-button text-gray-700 focus:outline-none focus:text-gray-900">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-7 w-7"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+  </div>
+</nav>
+</div>
+<hr>

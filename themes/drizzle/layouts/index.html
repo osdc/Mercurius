@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div class="py-10">
+<div class="text-center font-black mx-2 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-green-500">
+    An OSDC Newsletter here, //probably in a cool font? And then hopefully a second line.
+</div>
+</div>
+<div class="flex items-center flex-col my-4 mb-12">
+    <div class="text-2xl italic">
+        Let us deliver straight to your inbox!
+    </div>
+    <form action="" class="flex">
+    <input type="email" class="outline-none p-2 sm:w-96 bg-white bg-opacity-50 rounded shadow hover:bg-opacity-100 focus:bg-opacity-100 transition ease-out duration-200" id="email" placeholder="Email">
+    <button class="text-xl outline-none bg-gray-600 text-white font-bold py-1 px-2 rounded border-2 hover:bg-gray-800 transition ease-out duration-200">Subscribe</button>
+    </form>
+    <div class="text-gray-500 text-sm">Receive weekly newsletter updates. No spam, promise.</div>
+</div>
+<div class="py-4">
+    <h1 class="text-3xl mx-6 mb-4 font-bold text-center">
+        Latest Issue
+    </h1>
+    <div class="rounded shadow-xl bg-opacity-50 mx-2 p-6 text-justify bg-white text-2xl hover:bg-opacity-100 transition ease-out duration-200">
+        {{- range ( where .Site.RegularPages "Type" "post" | first 1) -}}
+        <div class="text-xs">
+            {{ .Date.Format "Mon, January 02, 2006" }}
+        </div>
+        <div class="font-bold">
+            <a class="hover:text-gray-500" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </div>
+        <div class="text-base py-2">
+            {{ .Summary }} . . .
+        </div>
+        <div class="flex justify-center">
+            <button class="text-xl outline-none hover:bg-gray-600 hover:text-white font-bold py-1 px-2 rounded border-2 border-gray-600 bg-opacity-0 transition ease-in duration-150">
+            <a href="{{ .RelPermalink }}">Read More</a>
+            </button>
+        </div>
+        {{ end }}
+    </div>
+</div>
+<div class="py-6">
+<h1 class="text-3xl mx-6 font-bold text-center mb-4">
+        All Posts
+    </h1>
+<div class="rounded shadow-xl bg-opacity-50 p-6 mx-2 bg-white text-2xl hover:bg-opacity-100 transition ease-out duration-200">
+<div class="flex flex-col">
+    {{- range where .Site.RegularPages "Type" "post" -}}
+    <div class="flex justify-between py-2">
+    <a href="{{ .RelPermalink }}" class="text-xl font-bold leading-tight hover:text-gray-500">
+        {{ .Title }}
+    </a>
+    <span class="text-xs text-gray-500 w-48 lg:w-auto text-right">{{ .Date.Format "January 02" }}</span>
+    </div>
+    <hr>
+    {{ end }}
+</div>
+</div>
+</div>
+{{ end }}
