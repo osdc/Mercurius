@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
   {{- partial "head.html" . -}}
-  <body
-    style="
-    background-image:url('{{`/images/Dalmatian-Spots.svg` | relURL }}');
-    background-attachment: fixed;">
-    <div class="container mx-auto max-w-6xl text-gray-700">
+  <body>
+    <div class="container mx-auto max-w-6xl text-white">
       {{- partial "header.html" . -}}
         {{- block "main" . }}
       {{- end }}
