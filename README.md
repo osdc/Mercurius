@@ -29,3 +29,11 @@ hugo
 hugo server -D
 
 ```
+
+### Acess the UI
+
+<p> copy paste the below URL at your browser </p>
+
+```
+localhost:1313
+```
