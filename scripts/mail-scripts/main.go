@@ -81,12 +81,18 @@ func send(body string, to []string) {
 		panic(err)
 	}
 
+	bodyContent, err := ioutil.ReadFile("email_body.html")
+    if err != nil {
+        log.Fatal(err)
+    }
+
 	m := gomail.NewMessage()
 	for _, r := range to {
+		fmt.Printf("Sending email to: %s\n", r)
 		m.SetHeader("From", from)
 		m.SetAddressHeader("To", r, r)
-		m.SetHeader("Subject", "Newsletter Test")
-		m.SetBody("text/html", body)
+		m.SetHeader("Subject", "Mercurius Test")
+		m.SetBody("text/html", string(bodyContent))
 
 		if err := gomail.Send(s, m); err != nil {
 			log.Printf("Could not send email to %q: %v", r, err)
