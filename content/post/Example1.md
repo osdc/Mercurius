@@ -6,6 +6,8 @@ date: 2023-11-14
 ## Introduction:-
 Welcome to Mercurius, the official Newsletter of OSDC! In this edition, we are excited to explore the thrilling events hosted by our community throughout the year and reflect on the rich history of our participation in programs such as Google Summer of Code (GSOC), ASOC, SIH, CodeJam and other initiatives, along with our fun and insightful meetups, workshops, and hackathons that we conduct regularly.
 
+![introduction](/content/post/images/IMG_3977.jpg)
+
 ## Events Round the Year:-
 Our community is vibrant and active, hosting a variety of events that served different interests. From workshops and hackathons to meetups and conferences, our aim is to create engaging opportunities for learning and collaborations in OSS. Let's highlight some of the standout events that shaped our community.
 
