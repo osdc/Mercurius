@@ -3,40 +3,36 @@ title: "Events by OSDC :-"
 date: 2023-11-14
 ---
 
-
-
 ## Introduction:-
-
-Welcome to the Mercurius the official Newsletter of OSDC! We are going to explore the exciting events hosted by our community throughout the year and explore the rich history of our participation in programs like Google Summer of Code (GSOC), ASOC and other initiatives.
+Welcome to Mercurius, the official Newsletter of OSDC! In this edition, we are excited to explore the thrilling events hosted by our community throughout the year and reflect on the rich history of our participation in programs such as Google Summer of Code (GSOC), ASOC, SIH, CodeJam and other initiatives, along with our fun and insightful meetups, workshops, and hackathons that we conduct regularly.
 
 ## Events Round the Year:-
-
-Our community is vibrant and active, hosting a variety of events that serve to different interests. From workshops and hackathons to meetups and conferences, Our aim is to create engaging opportunities for learning and collaborations in OSS. we'll highlight some of the standout events that have shaped our community.
+Our community is vibrant and active, hosting a variety of events that served different interests. From workshops and hackathons to meetups and conferences, our aim is to create engaging opportunities for learning and collaborations in OSS. Let's highlight some of the standout events that shaped our community.
 
 ### CTF (Unmasking the world of cybersecurity challenges)
-We demystify the practices of cybersecurity and go exploring into the labyrinth of Capture The Flag (CTF) challenges.we introduce you to the world of digital security and learn how to develop our skills by the help of CTFs. When it comes to cybersecurity, most of us are beginners and are intimidated by the intricacies of technology so this week we aim to help you by guiding you into the realms of cybersecurity.
+OSDC also demystified the practices of cybersecurity and explored the labyrinth of Capture The Flag (CTF) challenges. We introduce you to the world of digital security and learn how to develop our skills with the help of CTFs. When it came to cybersecurity, most of us are beginners and felt intimidated by the intricacies of technology.
 
 ### Introduction to OSS
-Have you ever wondered how you can become a part of this dynamic world, harness your skills, and contribute to the future of software?We will talk about the power of open-source software (OSS). With a guided career talk and QnA session at the end we aim to empower you to make your mark on the software landscape.
+Have you ever wondered how you could become a part of this dynamic world, harness your skills, and contribute to the future of software? We talked about the power of open-source software (OSS). With a guided career talk and QnA session at the end, we aimed to empower you to make your mark on the software landscape.
 
 ### Git/Github Workshop
-We'll learn how to tame the wild branches, cast spells with commits, and merge with the wisdom of a thousand wizards. GitHub, the land of collaboration, will be our trusty sidekick on this journey.
+We learn how to tame the wild branches, cast spells with commits, and merge with the wisdom of a thousand wizards. GitHub, the land of collaboration, is our trusty sidekick on this journey.
 
 ### OSDHack
-OSDHack is an online hackathon being organised by the Open Source Developers Community of JIIT, Noida. It is a 48-hour long gathering of like-minded hackers and tech enthusiasts where participants will brainstorm and build on their idea.
+OSDHack is an online hackathon organized by the Open Source Developers Community of JIIT, Noida. It is a 48-hour long gathering of like-minded hackers and tech enthusiasts where participants brainstormed and built on their ideas.
 
 ### LINUX Meetup
-Come, delve into the realms of this ocean with our very own Open Source Developers Community. From gaining insights into the world of Linux to exploring ways to a better developer, OSDC is thrilled to invite you to our orientation event.
+Come, delve into the realms of this ocean with our very own Open Source Developers Community. From gaining insights into the world of Linux to exploring ways to become a better developer.
 
 ### Google Summer of Code (GSOC)
-Join us on the 21st November for a special OSDC meetup dedicated to spreading awareness about Google Summer of Code (GSOC). We're thrilled to bring together enthusiasts, developers, and potential contributors to discuss the incredible opportunities GSOC offers.
+OSDC going to conduct a session on the 21st of November to spread awareness about Google Summer of Code (GSOC). We are thrilled to bring together enthusiasts, developers, and potential contributors to discuss the incredible opportunities GSOC offered.
 
-### Code Jam	
-This is something you might be asking yourself. A Code Jam is a chance to create something with a team. You are paired up with a group of other participants just like yourself with whom you collaborate and make a project on a given theme. You then have around a week's time to create the best project you can. See Format for detailed information.
+### Code Jam
+This is something you might have been asking yourself. A Code Jam ia a chance to create something with a team. You are paired up with a group of other participants just like yourself with whom you collaborated and made a project on a given theme. You then had around a week's time to create the best project you could. See Format for detailed information.
 
-## How You Can Get Involved
-Excited to be a part of our community and contribute to Open Source Softwares?Join our discord server (https://discord.gg/CB45rHGX) to express your interest and let us know how you'd like to contribute. Whether you're passionate about writing, coding, or organizing events, there's a place for you in Mercurius!
+## How You Could Get Involved
+Are you excited to be a part of our community and contribute to Open Source Software? You could have joined our Discord server (https://discord.gg/CB45rHGX) to express your interest and let us know how you'd like to contribute. Whether you are passionate about writing, coding, or organizing events, there is a place for you in Mercurius!
 
-We look forward to your participation in making the OSDC Club a platform that celebrates our community's achievements.
+We looked forward to your participation in making the OSDC Club a platform that celebrated our community's achievements.
 
 Happy contributing!
