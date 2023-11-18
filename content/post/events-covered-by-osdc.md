@@ -4,7 +4,7 @@ date: 2023-11-18T17:33:16+05:30
 ---
 
 ![](https://avatars.githubusercontent.com/u/919383?s=200&v=4)
-Welcome to Mercurius, the official Newsletter of OSDC!!<br>
+Welcome to Mercurius, the official Newsletter of OSDC!<br>
 
 Greetings and a warm welcome to the debut edition of our extraordinary newsletter initiative, a labor of love that has been in the works for quite some time now! 🚀 What better way to kick things off than by recapping the fantastic events we've covered throughout the year? These adventures reflect the rich history of our participation in programs like Google Summer of Code (GSOC), ASOC, SIH, and our role in organizing exciting events such as CodeJam, OSDHACK, and other initiatives. Plus, we've sprinkled in some fun and insightful meetups and workshops that we regularly host. Here's to celebrating our journey together!
 
@@ -44,12 +44,12 @@ It wasn't just a workshop; it was a fun-filled exploration where version control
 
 ### LINUX Meetup
 
-Ever wondered why we OSDCians are all die-hard Linux fans? Well, for starters its the freedom of customization and all security features that all the cool distros around the internet comes packed with but what hooked us was the efficient development workflow that is achieved when you switch to Linux!! It was an energy packed meetup where we explored stuffs like these and many more things.
+Ever wondered why we OSDCians are all die-hard Linux fans? Well, for starters its the freedom of customization and all security features that all the cool distros around the internet comes packed with but what hooked us was the efficient development workflow that is achieved when you switch to Linux! It was an energy packed meetup where we explored stuffs like these and many more things.
   
 
 ### Google Summer of Code (GSOC)
 
-In this meetup, we delved into the exciting worlds of GSoC, LFX and other open source programs. Imagine an engaging session where students were guided by alumnis and seniors with hands-on experience in these programs. It wasn't just about information; it was a pathway paved with insights and mentorship, connecting aspiring minds with seasoned professionals.
+In this meetup, we delved into the exciting worlds of GSoC, LFX and other open source programs. Imagine an engaging session where students were guided by alumni and seniors with hands-on experience in these programs. It wasn't just about information; it was a pathway paved with insights and mentorship, connecting aspiring minds with seasoned professionals.
 
 ### Text Editors & IDE Meetup
 
@@ -57,7 +57,7 @@ In this meetup, we delved into the exciting worlds of GSoC, LFX and other open s
 
 ## How You Can Get Involved ?
 
-OSDC is an open community where we learn and laugh together, we try to explore the world with the lens of a real developer with a focus on new and emerging technologies round the globe. With a great alumni support to guide us, we thrive to flourish into a developer in "actual sense". If you're inspired to be a part of this growing community, joining our discord server would be the first step, just drop a "Hi!!" in [#general](https://discord.gg/yH5GxE23cZ) and get ready to meet some awesome people to help you in your journey as a developer. Also, be wary of the realms of #watercooler-banter, you might step into Tracy and technochan there☠️☠️.
+OSDC is an open community where we learn and laugh together, we try to explore the world with the lens of a real developer with a focus on new and emerging technologies round the globe. With a great alumni support to guide us, we thrive to flourish into a developer in "actual sense". If you're inspired to be a part of this growing community, joining our discord server would be the first step, just drop a "Hi!" in [#general](https://discord.gg/yH5GxE23cZ) and get ready to meet some awesome people to help you in your journey as a developer. Also, be wary of the realms of #watercooler-banter, you might step into Tracy and technochan there☠️☠️.
 
-We have a numerous in-house projects to start your open-source contribution journey, which you find on our [github](github.com/osdc).
-Happy contributing!!
+We have a numerous in-house projects to start your open-source contribution journey, which you find on our [github](https://github.com/osdc).
+Happy contributing!
