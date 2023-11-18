@@ -42,7 +42,7 @@ We unraveled the mysteries of wild branches, cast spells with commits, and learn
 It wasn't just a workshop; it was a fun-filled exploration where version control became a tale of collaboration and branches danced to the rhythm of coding magic.
 
 
-### LINUX Meetup
+### Linux Meetup
 
 Ever wondered why we OSDCians are all die-hard Linux fans? Well, for starters its the freedom of customization and all security features that all the cool distros around the internet comes packed with but what hooked us was the efficient development workflow that is achieved when you switch to Linux! It was an energy packed meetup where we explored stuffs like these and many more things.
   
@@ -55,7 +55,7 @@ In this meetup, we delved into the exciting worlds of GSoC, LFX and other open s
 
  In a blast-from-the-past meetup, our core team members dived into the world of text editors and IDEs. Picture this: Students fearlessly conquering the wild territories of Vim, finally mastering the elusive 'exit' command and tweaking its magical settings. But that's not all! We ventured into the realms of Emacs, Nano, and even danced on the edge with VS Code (or, as we fondly call it, 'electron sh**').
 
-## How You Can Get Involved ?
+## How You Can Get Involved?
 
 OSDC is an open community where we learn and laugh together, we try to explore the world with the lens of a real developer with a focus on new and emerging technologies round the globe. With a great alumni support to guide us, we thrive to flourish into a developer in "actual sense". If you're inspired to be a part of this growing community, joining our discord server would be the first step, just drop a "Hi!" in [#general](https://discord.gg/yH5GxE23cZ) and get ready to meet some awesome people to help you in your journey as a developer. Also, be wary of the realms of #watercooler-banter, you might step into Tracy and technochan there☠️☠️.
 
