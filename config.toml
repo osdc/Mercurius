@@ -5,7 +5,7 @@ title = "Mercurius"
 paginate = 10
 enableRobotsTXT = true
 theme = "drizzle"
-summarylength = 100
+summarylength = 60
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
@@ -22,7 +22,7 @@ pygmentscodefencesguesssyntax = true
 	pagetitle = "Home"
 
 	# Add a subtitle to your website
-	subtitle = "An OSDC Newsletter"
+	subtitle = "OSDC Newsletter Initiative"
 
 	# Activate to show authors on pages if available
 	#listAuthor = true
