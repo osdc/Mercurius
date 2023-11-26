@@ -1,5 +1,6 @@
 <title> {{ .Site.Title }} </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> {{/* Scale text sizes properly for mobile srceens */}}
+<link rel="icon" type="image/x-icon" href="https://github.com/osdc/design/blob/master/logo/osdc.png?raw=true">
 {{ $styles := resources.Get "css/styles.scss" | toCSS | postCSS (dict "config" "./assets/css/postcss.config.js") }}
 {{ if .Site.IsServer }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
